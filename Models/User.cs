@@ -1,14 +1,30 @@
-﻿namespace ContractMonthlyClaimSystem.Models
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace ContractMonthlyClaimSystem.Models
 {
     public class User
     {
-        public int userID { get; set; }
-        public string full_names { get; set; }
-        public string surname { get; set; }
-        public string email { get; set; }
-        public string role { get; set; }
-        public string gender { get; set; }
-        public string password { get; set; }
-        public DateTime date { get; set; }
+        [Key]
+        public int UserID { get; set; }
+
+        [MaxLength(150)]
+        public string FullNames { get; set; }
+
+        [MaxLength(150)]
+        public string Surname { get; set; }
+
+        [MaxLength(150)]
+        public string Email { get; set; }
+
+        [MaxLength(50)]
+        public string Role { get; set; } // Lecturer, Coordinator, Manager, HR
+
+        public string Gender { get; set; }
+
+        [MaxLength(150)]
+        public string Password { get; set; }
+
+        public DateTime Date { get; set; }
     }
 }
