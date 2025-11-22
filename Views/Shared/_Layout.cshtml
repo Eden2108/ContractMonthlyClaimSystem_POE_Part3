@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject ContractMonthlyClaimSystem.Models.ApplicationDbContext _context
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -40,6 +43,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-controller="AcademicManager" asp-action="Index">Manager Approval</a>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-controller="HR" asp-action="Index">HR</a>
+                        </li>
                     </ul>
                 </div>
             </div>
