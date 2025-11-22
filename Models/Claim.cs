@@ -25,19 +25,19 @@ namespace ContractMonthlyClaimSystem.Models
 
         [MaxLength(150)]
         [Column("module_name")]
-        public string ModuleName { get; set; }
+        public string? ModuleName { get; set; }
 
         [MaxLength(150)]
         [Column("faculty_name")]
-        public string FacultyName { get; set; }
+        public string? FacultyName { get; set; }
 
         [MaxLength(250)]
         [Column("supporting_documents")]
-        public string SupportingDocuments { get; set; }
+        public string? SupportingDocuments { get; set; }
 
         [MaxLength(50)]
         [Column("claim_status")]
-        public string ClaimStatus { get; set; }
+        public string? ClaimStatus { get; set; }
 
         [Column("creating_date")]
         public DateTime CreatingDate { get; set; }
@@ -46,10 +46,10 @@ namespace ContractMonthlyClaimSystem.Models
         [Column("lecturerID")]
         public int LecturerID { get; set; }
 
-        public User Lecturer { get; set; }
+        public User? Lecturer { get; set; }
 
         [MaxLength(150)]
         [Column("lecturer_name")]
-        public string LecturerName { get; set; }
+        public string? LecturerName { get; set; }
     }
 }

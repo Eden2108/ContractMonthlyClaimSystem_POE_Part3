@@ -9,21 +9,21 @@ namespace ContractMonthlyClaimSystem.Models
         public int UserID { get; set; }
 
         [MaxLength(150)]
-        public string FullNames { get; set; }
+        public string? FullNames { get; set; }
 
         [MaxLength(150)]
-        public string Surname { get; set; }
+        public string Surname { get; set; } = string.Empty;
 
         [MaxLength(150)]
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
 
         [MaxLength(50)]
-        public string Role { get; set; } // Lecturer, Coordinator, Manager, HR
+        public string Role { get; set; } = string.Empty; // Lecturer, Coordinator, Manager, HR
 
-        public string Gender { get; set; }
+        public string Gender { get; set; } = string.Empty;
 
         [MaxLength(150)]
-        public string Password { get; set; }
+        public string Password { get; set; } = string.Empty;
 
         public DateTime Date { get; set; }
     }

@@ -11,21 +11,21 @@ namespace ContractMonthlyClaimSystem.Models
 
         public int ClaimId { get; set; }
         [ForeignKey("ClaimId")]
-        public Claim Claim { get; set; }
+        public Claim? Claim { get; set; } // Made nullable
 
         public int UpdatedById { get; set; }
         [ForeignKey("UpdatedById")]
-        public User UpdatedBy { get; set; }
+        public User? UpdatedBy { get; set; } // Made nullable
 
         [Required, StringLength(50)]
-        public string OldStatus { get; set; }
+        public string OldStatus { get; set; } = string.Empty;
 
         [Required, StringLength(50)]
-        public string NewStatus { get; set; }
+        public string NewStatus { get; set; } = string.Empty;
 
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
         [MaxLength(250)]
-        public string Remarks { get; set; }
+        public string Remarks { get; set; } = string.Empty;
     }
 }
